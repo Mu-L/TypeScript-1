@@ -497,7 +497,7 @@ TypeScript 的项目引用功能也是以"拓扑"依赖顺序构建项目集合�
 
 举个例子，如果我们有两个名为 `backend` 和 `frontend` 的项目，它们都依赖一个名为 `core` 的项目，TypeScript 在构建 `core` 并生成其声明文件之前，无法开始对 `frontend` 或 `backend` 进行类型检查。
 
-![](https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2024/04/5-5-beta-isolated-declarations-deps.png)
+![beta-isolated-declarations-deps](https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2024/04/5-5-beta-isolated-declarations-deps.png)
 
 在上面的图中，您可以看到我们有一个瓶颈。虽然我们可以并行构建 `frontend` 和 `backend`，但我们需要等待 `core` 完成构建，然后才能开始任何一个项目的构建。
 
